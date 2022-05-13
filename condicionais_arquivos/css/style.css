@@ -19,6 +19,14 @@ div {
   height: 600px;
 }
 
+p {
+  color: blue;
+  background: orange;
+  font-family: monospace;
+  font-size: 1em;
+  font-weight: normal;
+}
+
 section {
   max-width: 600px;
   margin: 0 auto;

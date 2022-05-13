@@ -1,3 +1,4 @@
+
 @function grid($colunas, $total: 12) {
 	@return round(($colunas / $total) * 100%);
 }

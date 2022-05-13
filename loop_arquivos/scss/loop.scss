@@ -1,3 +1,41 @@
-div {
-	width: 200px;
+//-------------------------for-----------------------------------
+@for $i from 1 through 12 {
+    $width: ($i / 12) * 100%;
+    .porcento-#{$i}{
+        width:$width;
+    }
+}
+
+
+$container: 960;
+$colunas: 12;
+$gutter:20;
+
+@for $i from 1 through $colunas {
+    $width: $container / $colunas * $i - $gutter;
+    .grid-#{$i}{
+        width:$width + px;
+    }
+}
+    
+
+
+//---------------------------while----------------------------------
+
+$numero: 1;
+@while $numero <= 6{
+    .type-#{$numero}{
+        font-size: 16 * $numero + px;
+    }
+    $numero: $numero + 1;
+}
+
+//------------------------------each----------------------------------
+
+$lista: facebook twitter pinterest instagram;
+
+@each $item in $lista {
+    .rede-#{$item} {
+        background-image: url('../img/#{$item}.png');
+}
 }

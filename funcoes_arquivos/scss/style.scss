@@ -1,9 +1,51 @@
+//-----------------LIGHTEN E DARKEN----------------------
+
+//$roxo:#8844ee;
+//
+//a{
+//    color:#fff;
+//    background: $roxo;
+//    &:hover{
+//        background: lighten($roxo, 20%);
+//    }
+//}
+
+//-----------------------TRANSPARENTIZE-------------------
+
+
+ul {
+	text-align: center;
+	li {
+		display: inline-block;
+		list-style: none;
+		font-size: em();
+		a {
+			display: block;
+			padding: 20px;
+			text-decoration: none;
+			background: blue;
+			color: white;
+			font-size: em(16, 36);
+			&:hover, &.active {
+				background: transparentize(blue, .5);
+			}
+		}
+	}
+}
+
+
+
+
+//---------------------------CRIANDO FUNCAO-------------------------
+
+
+
 @function grid($colunas, $total: 12) {
 	@return round(($colunas / $total) * 100%);
 }
 
 div {
-	width: grid(5);
+	width: grid(6);
 }
 
 @function em($pixels, $contexto: 16) {
@@ -96,29 +138,6 @@ section {
 		font-family: $font-primaria;
 	}
 }
-
-ul {
-	text-align: center;
-	li {
-		display: inline-block;
-		list-style: none;
-		font-size: em(36);
-		a {
-			display: block;
-			padding: 20px;
-			text-decoration: none;
-			background: blue;
-			color: white;
-			font-size: em(16, 36);
-			&:hover, &.active {
-				background: transparentize(blue, .5);
-			}
-		}
-	}
-}
-
-
-
 
 
 
